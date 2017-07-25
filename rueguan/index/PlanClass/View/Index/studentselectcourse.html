@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}lib/html5shiv.js"></script>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}lib/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="{$Think.const.PLANCLASS}resources/static/h-ui/css/H-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="{$Think.const.PLANCLASS}resources/lib/Hui-iconfont/1.0.8/iconfont.min.css" />
+		<link rel="stylesheet" type="text/css" href="{$Think.const.PLANCLASS}resources/css/app.css?id=21" />
+		<!--[if lt IE 9]>
+		<link href="{$Think.const.PLANCLASS}static/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+		<![endif]-->
+		<!--[if IE 6]>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+		<script>DD_belatedPNG.fix('*');</script>
+		<![endif]-->
+		<title>如e教育 - 学校管理系统</title>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}resources/lib/jquery/1.9.1/jquery.min.js"></script> 
+        <script type="text/javascript" src="{$Think.const.PLANCLASS}resources/static/h-ui/js/H-ui.min.js"></script>
+        <script type="text/javascript" src="{$Think.const.PLANCLASS}resources/lib/layer/layer.js" ></script>       
+        <script src="{$Think.const.PLANCLASS}resources/js/app.js?id=2152"></script>
+        <script>
+          $(function(){
+          	  $("#start").off().on("click",function(){
+          	  	  var lenght=0;
+          	  	  var courseid ="";
+          	  	  var name ="";
+          	  	  $("input[name='cbcourse']").each(function(){
+          	  	  	  if($(this).is(":checked")){
+          	  	  	  	 lenght++;
+          	  	  	  	 courseid += "|"+$(this).val()+"|";
+          	  	  	  	 name += $(this).data("name")+"、";
+          	  	  	  }
+          	  	  })
+          	  	  if (lenght==3) {
+          	  	  	 layer.msg('你选择'+name+'3科为主修科目，确定提交吗？', {
+				        time: 0 //不自动关闭
+				        ,btn: ['确定', '关闭']
+				        ,yes: function(index){
+				          layer.close(index);
+				          $data.BaoMing(courseid);
+				        }
+				      })
+          	  	  	
+          	  	  }
+          	  	  else $mc.layer.msg("请选择3门主修课");
+          	  })
+          })
+        </script>
+       
+	</head>
+	<body data-schoolid = "{$out.schoolid}" data-grade="{$out.grade}" data-studentid="{$out.studentid}" data-ajax="__APP__/PlanClass/Ajax/">
+	  <section class="all-body">
+		 <block name="include"><include file="studenthead" /></block><!--进入公用模版-->
+		<div class="content-body">
+			<div class="left">
+			  <block name="include"><include file="studentleft" /></block>
+			</div>
+			<div class="right">
+			  <div class="art-body">			  	 
+			  	<div class="head" style="display:{$out.display}">
+			  	 	<div class="sub-left">请选择3门主修课</div>
+			  	 	<div class="sub-right f-16" style="color:#f00">
+			  	 	   报名截止日期：{$out.dayto}
+			  	 	</div>
+			  	 </div>
+			  	<table class="table table-border table-bordered table-hover radius" style="display:{$out.display}">
+			  	 	<tr>			  	 		
+			  	 		<th  style="width:50px"></th>
+			  	 		<th  style="width:100px">科目</th>			  	 		
+			  	 		<th>任课教师</th>			  	 		
+			  	 		<th style="width:100px">报名人数</th>
+			  	 	</tr>
+			  	 	<tbody>
+			  	 	 <tr>
+			  	 		<td><input name="cbcourse" data-name="政治" type="checkbox" value="11"/></td>
+			  	 		<td >政治</td>
+			  	 		<td>{:GetTeacherList($out['schoolid'],11)}</td>			  	 		
+			  	 		<td>{:Already($out['schoolid'],$out['grade'],11)}</td>			  	 		
+			  	 	 </tr>
+			  	 	 <tr>
+			  	 		<td><input name="cbcourse" data-name="历史" type="checkbox" value="18"/></td>
+			  	 		<td >历史</td>
+			  	 		<td>{:GetTeacherList($out['schoolid'],18)}</td>			  	 		
+			  	 		<td>{:Already($out['schoolid'],$out['grade'],18)}</td>			  	 		
+			  	 	 </tr>
+			  	 	 <tr>
+			  	 		<td><input name="cbcourse" data-name="地理" type="checkbox" value="19"/></td>
+			  	 		<td >地理</td>
+			  	 		<td>{:GetTeacherList($out['schoolid'],19)}</td>			  	 		
+			  	 		<td>{:Already($out['schoolid'],$out['grade'],19)}</td>			  	 		
+			  	 	 </tr>
+			  	 	 <tr>
+			  	 		<td><input name="cbcourse" data-name="物理" type="checkbox" value="15"/></td>
+			  	 		<td >物理</td>
+			  	 		<td>{:GetTeacherList($out['schoolid'],15)}</td>			  	 		
+			  	 		<td>{:Already($out['schoolid'],$out['grade'],15)}</td>			  	 		
+			  	 	 </tr>
+			  	 	 <tr>
+			  	 		<td><input name="cbcourse" data-name="化学" type="checkbox" value="16"/></td>
+			  	 		<td >化学</td>
+			  	 		<td>{:GetTeacherList($out['schoolid'],16)}</td>			  	 		
+			  	 		<td>{:Already($out['schoolid'],$out['grade'],16)}</td>			  	 		
+			  	 	 </tr>
+			  	 	 <tr>
+			  	 		<td><input name="cbcourse" data-name="生物" type="checkbox" value="17"/></td>
+			  	 		<td >生物</td>
+			  	 		<td>{:GetTeacherList($out['schoolid'],17)}</td>			  	 		
+			  	 		<td>{:Already($out['schoolid'],$out['grade'],17)}</td>			  	 		
+			  	 	 </tr>
+			  	    </tbody>
+			  	 </table>	
+			  	  <div class="table-bottom" style="display:{$out.display}">
+					 	<div class="sub-left">
+					 		<div class="check-box">				             
+				            </div>
+					 	</div>
+					 	<div class="sub-right">
+					 		{:SetBtnStatus($out['studentid'])}
+					 	</div>
+					 </div>		  	 
+			  </div>
+			</div>
+		</div>
+	  </section>
+	</body>
+</html>

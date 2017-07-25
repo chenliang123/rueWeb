@@ -1,0 +1,79 @@
+.cb-right .no-info{
+  position: relative;width: 960px;height:345px;margin: 10px 0 0 20px;background: url(../images/no_info.png) no-repeat; background-size:150px;background-position:406px 74px;background-color: #f9f9f9;  box-shadow: 2px 2px 2px #ccc; border-radius: 10px; float: left;
+}
+.cb-right .no-info h4{
+	position: absolute;top: 245px;width:100%;text-align: center;font-size: 1.3em;font-weight:bold;color:#444;
+}
+.content-body .index-right{background: #fff;}
+.schoolinfo .panel-header-indexWg span{
+	float: right;margin: 0 15px 10px;color: #6e90e4;font-size: .9em;cursor: pointer;
+}
+.panel-body-index{overflow: hidden;}
+.index-right .schoolinfo{padding-bottom: 44px;}
+
+
+.datainfor{position:relative;margin-top: 40px;height: 592px;overflow: hidden;}
+
+.personinfo{
+	position:relative;display: inline-block;width: 592px;min-height: 588px;background: #F2F2F2;margin-left: 15px;border: 0;border-radius: 10px;
+}
+.personinfo .panel-header{
+	background: #F2F2F2;border-bottom: 1px solid #B2B2B2;height: 37px;line-height: 37px;
+}
+.personinfo .panel-body{
+	padding: 0;max-height: 534px;overflow-y: auto;
+}
+.personinfo .fixed{width:592px;position: absolute;top:54px;background: #f2f2f2;border-top: 1px solid #B2B2B2;}
+.personinfo .fixed th{border:none}
+.personinfo .panel-body td{border:none}
+.personinfo .panel-body tr td:nth-of-type(5){color: #325EDB;cursor: pointer;}
+
+.pie{position:absolute;top:0;right:10px;display: inline-block;width:338px;height: 594px;}
+.pie .panel{border: none;background-color:#F2F2F2;border-radius: 10px;margin-bottom: 20px;}
+.pie .panel-header{height:37px;line-height:37px;background: #F2F2F2;border-bottom: 2px solid #B2B2B2;}
+.pie .panel-body{height: 228px;background: #fff;}
+
+.daydata .panel-header ul{
+	float: right;
+	overflow: hidden;
+}
+.daydata .panel-header ul li{
+  width: 80px;
+	float: left;
+	text-align: center;
+	font-size: 14px;
+	color: #9B9B9B;
+	cursor: pointer;
+}
+.daydata .panel-header ul .active{
+	color: #315EDB;
+	border-bottom: 2px solid #315EDB;
+}
+
+
+iframe{
+	position: absolute;
+	top: -55px;
+}
+.chartFooter{
+	text-align: center;
+	margin-top: 40px;
+    height: 50px;
+    width: 100%;
+    float: left;
+}
+.chartFooter i{
+	display: inline-block;
+	width: 36px;
+	height: 4px;
+	border-radius: 2px;
+	background: #325EDB;
+	margin-right: 10px;
+}
+.chartFooter i:nth-of-type(2){
+	background: #ECB128;
+}
+.chartFooter span{
+	display: inline-block;
+	margin-right: 40px;
+}

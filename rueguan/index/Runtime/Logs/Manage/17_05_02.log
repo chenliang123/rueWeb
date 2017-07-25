@@ -1,0 +1,54 @@
+[ 2017-05-02T10:33:12+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/Login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0120s ]
+SQL: SELECT `pwd`,`type`,`schoolid` FROM `edu_user` WHERE ( (account='liutong' or phone='liutong') and type=4 ) LIMIT 1   [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-02T10:54:20+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetGradeClass
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_class` [ RunTime:0.0090s ]
+SQL: SELECT `name`,`id` FROM `edu_class` WHERE ( grade='3' and schoolid=94 ) ORDER BY orderid asc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-02T14:54:06+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/Login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0110s ]
+SQL: SELECT `pwd`,`type`,`schoolid` FROM `edu_user` WHERE ( (account='liutong' or phone='liutong') and type=4 ) LIMIT 1   [ RunTime:0.0140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-05-02T15:11:50+08:00 ] 127.0.0.1 /index.php/Manage/Index/classManage/schoolid/94
+ERR: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+
+[ 2017-05-02T15:11:50+08:00 ] 127.0.0.1 /index.php/Manage/Index/classinfo/schoolid/94/day/20170315/classid/0/more/0/$classname/%E4%BA%8C%E5%B9%B4%E7%BA%A7%EF%BC%882%EF%BC%89%E7%8F%AD
+ERR: SQLSTATE[HY000] [2002] 套接字操作尝试一个无法连接的主机。
+
+
+[ 2017-05-02T15:15:22+08:00 ] 127.0.0.1 /index.php/Manage/Index/classinfo/schoolid/94/day/20170315/classid/0/more/0/$classname/%E5%9B%9B%E5%B9%B4%E7%BA%A7%EF%BC%882%EF%BC%89%E7%8F%AD
+ERR: SQLSTATE[HY000] [2002] 套接字操作尝试一个无法连接的主机。
+
+
+[ 2017-05-02T15:15:39+08:00 ] 127.0.0.1 /index.php/Manage/Index/classinfo/schoolid/94/day/20170315/classid/0/more/0/$classname/%E5%9B%9B%E5%B9%B4%E7%BA%A7%EF%BC%882%EF%BC%89%E7%8F%AD
+ERR: SQLSTATE[HY000] [2002] 套接字操作尝试一个无法连接的主机。
+
+
+[ 2017-05-02T15:15:41+08:00 ] 127.0.0.1 /index.php/Manage/Index/classinfo/schoolid/94/day/20170315/classid/0/more/0/$classname/%E5%9B%9B%E5%B9%B4%E7%BA%A7%EF%BC%882%EF%BC%89%E7%8F%AD
+ERR: SQLSTATE[HY000] [2002] 套接字操作尝试一个无法连接的主机。
+
+
+[ 2017-05-02T15:15:45+08:00 ] 127.0.0.1 /index.php/Manage/Index/classManage/schoolid/94
+ERR: SQLSTATE[HY000] [2002] 套接字操作尝试一个无法连接的主机。
+
+

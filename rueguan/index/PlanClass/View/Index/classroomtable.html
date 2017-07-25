@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}lib/html5shiv.js"></script>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}lib/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="{$Think.const.PLANCLASS}resources/static/h-ui/css/H-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="{$Think.const.PLANCLASS}resources/lib/Hui-iconfont/1.0.8/iconfont.min.css" />
+		<link rel="stylesheet" type="text/css" href="{$Think.const.PLANCLASS}resources/css/app.css?id=2" />
+		<!--[if lt IE 9]>
+		<link href="{$Think.const.PLANCLASS}static/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+		<![endif]-->
+		<!--[if IE 6]>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+		<script>DD_belatedPNG.fix('*');</script>
+		<![endif]-->
+		<title>如e教育 - 学校管理系统</title>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}resources/lib/jquery/1.9.1/jquery.min.js"></script> 
+        <script type="text/javascript" src="{$Think.const.PLANCLASS}resources/static/h-ui/js/H-ui.min.js"></script>
+        <script type="text/javascript" src="{$Think.const.PLANCLASS}resources/lib/layer/layer.js" ></script>      
+        <script src="{$Think.const.PLANCLASS}resources/js/app.js?id=1132020"></script>
+        <script>
+        	$(function(){
+        		 $("#menulist>li>span").off().on("click",function(){
+        		 	  var obj = $(this).parent("li");
+        		 	  showMenu(obj)
+        		 })        		 
+        		$data.GetClassRoomTable($("#classroomlist").val());
+        		$("#classroomlist").change(function(){
+        			 $data.GetClassRoomTable($(this).val());
+        		})
+        		$("#cb-class").off().on("click",function(){        			
+        			if($(this).is(':checked')){
+        				 $(".f-name").show();
+        			}
+        			else $(".f-name").hide();
+        		})
+        		$("#cb-course").off().on("click",function(){        			
+        			if($(this).is(':checked')){
+        				 $(".f-course").show();
+        			}
+        			else $(".f-course").hide();
+        		})
+        		$("#cb-teacher").off().on("click",function(){        			
+        			if($(this).is(':checked')){
+        				 $(".f-teacher").show();
+        			}
+        			else $(".f-teacher").hide();
+        		})
+        	})
+        </script>
+	</head>
+	<body data-schoolid = "{$out.schoolid}" data-ajax="__APP__/PlanClass/Ajax/">
+	  <section class="all-body">
+		<block name="include"><include file="head" /></block><!--进入公用模版-->
+		<div class="content-body">
+			<div class="left">
+			  <block name="include"><include file="left" /></block>
+			</div>
+			<div class="right">
+			  <div class="art-body">
+			  	 <div class="head">
+			  	 	<div class="sub-left"></div>
+			  	 	<div class="sub-right">
+			  	 	     <div class="check-box">
+			              <input type="checkbox" id="cb-class" checked="checked">
+			              <label for="cb-class">班级</label>
+			             </div>			  	 		
+			              <div class="check-box">
+			              <input type="checkbox" id="cb-course" checked="checked">
+			              <label for="cb-course">科目</label>
+			             </div>
+			              <div class="check-box">
+			              <input type="checkbox" id="cb-teacher" checked="checked">
+			              <label for="cb-teacher">教师</label>
+			             </div>
+			  	 		<select class="select radius selectbody" id="classroomlist">
+			  	 			{$out.option}
+			  	 		</select>
+			  	 	</div>
+			  	 </div>
+			  	 <table class="table table-border table-bordered radius sub-hover">
+			  	 	<tr>
+			  	 		<th width="50"></th>
+			  	 		<th width="128">周一</th>
+			  	 		<th width="128">周二</th>
+			  	 		<th width="128">周三</th>
+			  	 		<th width="128">周四</th>
+			  	 		<th width="128">周五</th>
+			  	 		<th width="128">周六</th>
+			  	 		<th width="128">周日</th>
+			  	 	</tr>
+			  	 	<tbody id="thtml"></tbody>
+			  	 </table>
+			  </div>
+			</div>
+		</div>
+	  </section>
+	</body>
+</html>

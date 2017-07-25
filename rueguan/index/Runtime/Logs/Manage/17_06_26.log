@@ -1,0 +1,60 @@
+[ 2017-06-26T10:11:17+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/Login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0156s ]
+SQL: SELECT `pwd`,`type`,`schoolid` FROM `edu_user` WHERE ( (account='liutong' or phone='liutong') and type=4 ) LIMIT 1   [ RunTime:0.0156s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-26T13:23:27+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/OutLogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-26T13:30:02+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/Login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0830s ]
+SQL: SELECT `pwd`,`type`,`schoolid` FROM `edu_user` WHERE ( (account='liutong' or phone='liutong') and type=4 ) LIMIT 1   [ RunTime:0.0940s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-26T13:30:14+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0550s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=14462 ) ORDER BY id desc  [ RunTime:0.0260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-06-26T13:30:17+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/OutLogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T13:40:49+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/Login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0120s ]
+SQL: SELECT `pwd`,`type`,`schoolid` FROM `edu_user` WHERE ( (account='liutong' or phone='liutong') and type=4 ) LIMIT 1   [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-06-26T13:44:33+08:00 ] 127.0.0.1 /index.php/Manage/Index/countReport/schoolid/94/page/1
+ERR: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+

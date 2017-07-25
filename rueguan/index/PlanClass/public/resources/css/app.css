@@ -1,0 +1,217 @@
+a:hover{
+	text-decoration: none;
+}
+input:read-only
+{ 
+   background: #eee; border:1px solid #ccc; cursor:not-allowed; 
+}
+.left,.sub-left{
+	float: left;
+}
+.right,.sub-right{
+	 float: right;
+}
+.all-body{
+	width: 1200px; margin: 0 auto;
+}
+.login-head{
+	width: 1200px; height: 187px; background: url(../img/bg.png) no-repeat; text-align: center; font-size: 30px; line-height: 187px; color: #fff;
+}
+.schoolname{
+	width: 1200px; height: 70px; line-height: 35px; font-size: 25px; text-align: center; float: left; margin-top: 30px;
+}
+
+.login-input-box{
+	width: 500px;  float: left; margin: 50px 0 0 350px;
+}
+.login-input-box .input-box{
+	 width: 498px; border:1px solid #D8D8D8; height: 40px;  margin-bottom: 20px;
+}
+.login-input-box .input-box .left{
+	 width: 40px; height: 40px; text-align: center; float: left;
+}
+.login-input-box .input-box .left img{
+	margin-top: 5px;
+}
+.login-input-box .input-box .rigth{
+	 width: 455px; height: 40px; float: right; 
+}
+.login-input-box .input-box .rigth input{
+	 width: 455px; height: 35px;  border: 0px; margin-top: 2px; font-size: 18px;
+}
+.check-box{ padding-left: 0px; width: 500px;}
+.skin-minimal{ width: 500px; margin-top: 15px;}
+.radio-box{padding-left: 0px; padding-right: 80px;}
+.blue{
+	 width: 500px; background: #14ACF4; height: 35px; line-height:25px; margin-top: 30px; border: 0px; border-radius: 5px; color: #fff;
+}
+.header{
+	 width: 1200px; height: 40px; background: #00B8D4; margin: 0 auto; position: fixed; top: 0px; z-index: 9
+}
+.header .left{
+  margin-left: 20px; float: left; color: #fff; height: 40px; line-height: 40px; font-size: 15px;
+}
+.header .left img{
+	 position: relative; top:-2px;
+}
+.header .right{
+	 float: right; margin-right: 20px; color: #fff; height: 40px; line-height: 40px; font-size: 15px;
+}
+.header .right a{
+	 color: #fff;
+}
+
+.content-body{
+	 margin-top: 40px; float: left; background: #F0F0F0; width: 1200px;
+}
+.content-body .left{
+	width: 199px; height: auto; border-right: 1px solid #fff; float: left; position: fixed; background: #F0F0F0;z-index: 2
+}
+.content-body .left ul{
+	 width: 184px; float: left; margin-left: 15px;
+}
+.content-body .left ul li{
+	 width: 184px; float: left; min-height: 40px; line-height: 40px; font-family: "微软雅黑"; font-size: 14px; cursor: pointer; font-weight: bold;  border-bottom: 1px solid #ddd;
+}
+.content-body .left ul li .sub-menu{
+	 width: 179px;  float: left; margin-left: 10px;  height: 0px; overflow: hidden; 
+}
+.content-body .left ul li .sub-menu a{
+	 width: 179px; float: left;display: inline-block; height: 35px; line-height: 35px; color: #666; font-weight: normal;
+}
+.content-body .left ul li .Hui-iconfont{
+	 float: right; margin-right: 10px; color: #999;
+}
+
+.content-body .right{
+	width: 1000px; height: auto;  float: right;
+}
+.art-body{
+	 width: 950px; height: auto; float: left; margin: 25px;
+}
+.art-body .head{
+	 width: 950px; height: 40px;  line-height: 40px; float: left; margin-bottom: 10px;
+}
+.art-body .head .sub-left{
+	 font-size: 14px;
+}
+.art-body .head .sub-right .b{
+	background: #14ACF4; height: 30px; line-height: 22px; border: 0px; border-radius: 5px; color: #fff;
+}
+.art-body .head .sub-right  .check-box{
+	 width: 70px; padding-right: 0px;
+}
+.art-body .table th,.art-body .table td{
+	text-align: center; background: #fff;
+}
+
+.info-body{
+	 width:850px; margin:20px 0 0 50px; background: #fff; border-radius: 10px;  height: 500px;
+}
+.info-body .title{
+	 width: 850px; height: 80px; line-height: 80px; text-align: center; font-size: 15px; color: #666;
+}
+.info-body .info-box{
+	float: left; 
+}
+.info-body .info-box .info{
+	 width: 300px; background: #14ACF4; height: 380px; float: left; margin:0 62px;
+}
+.info-body .info-box .info .top{
+	 width: 300px; height: 80px; float: left; line-height: 80px; color: #FFF; font-size: 22px; text-align: center;
+}
+.info-body .info-box .info .center{
+	width: 200px; height: 200px; text-align: center; line-height: 200px; font-size: 40px; color: #14ACF4; border-radius: 100px; background: #fff; float: left; margin: 0 0 0 50px;
+}
+.info-body .info-box .info .bottom{
+	width: 300px; height: 80px; float: left; line-height: 80px; color: #FFF; font-size: 15px; text-align: center;
+}
+.btn-box{
+	 width: 950px; height: 100px; line-height: 100px; text-align: center;
+}
+.pop-body{
+	width: 330px; float: left;margin: 20px 0 0 35px;
+}
+.pop-body .pop-box{
+	 width: 330px; height: 40px;  line-height: 40px; float: left;
+}
+.pop-body .pop-box .sub-left{
+	 width: 80px;
+}
+.pop-body .pop-box .sub-right{
+	width: 250px;
+}
+.pop-body .pop-box .sub-right .select{
+	width: 240px; padding-left: 8px; height: 30px; line-height: 30px; border-radius: 5px; border: 1px solid #DDDDDD; margin: 5px;
+}
+.pop-btn{
+	 width: 400px; height: 50px; line-height: 50px; float: left; border-top: 1px solid #ccc; margin-top: 10px; text-align: right;
+}
+.pop-btn .btn{
+	 margin-right: 15px;
+}
+.pop-teacherlist{ 
+   width: 370px; margin:10px 0 0 15px;
+}
+.pop-teacherlist .pop-name{
+	 width: 74px; float: left; height: 30px; line-height: 30px; text-align: center;
+}
+
+.pop-teacherlist .pop-name .check-box{
+	width: 74px; padding-right:0px; text-align: left; display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.pop-teacherlist .pop-classname{
+	 width: 123px; float: left; height: 30px; line-height: 30px; text-align: center;
+}
+.pop-teacherlist .pop-classname .check-box{
+	width: 123px; padding-right:0px; text-align: left; display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.fenbaninput{
+	width: 50px; border: 1px solid #14ACF4 ; text-align:center;
+}
+.table-bottom{
+	 width: 950px; height: 50px;background: #ddd; line-height: 50px;
+}
+.table-bottom .sub-left{
+	 margin-left: 20px;
+}
+.table-bottom .sub-right{
+	margin-right: 20px;
+}
+.orange{
+	color: orange;
+}
+.sub-hover td:hover{
+	background: #14ACF4; color: #fff; cursor: pointer;
+}
+.tdjinzhi {
+	  background: #f09800; color: #fff;
+}
+.selectbody{
+	 width: 150px; height: 30px;
+}
+.page{
+	width: 950px; height: 50px; line-height: 50px;text-align: right;
+}
+.page a,.page span{
+	 border: 1px solid #ccc; padding: 3px 7px; margin-left: 5px; background: #f0fdff; color: #666
+}
+.page span.current{
+	 background: #00B8D4; color: #fff
+}
+.page a:hover{
+	  background: #00B8D4; color: #fff
+}
+.nodata{
+	width: 950px; height: 170px; text-align: center; margin-top: 100px; float: left;
+}
+#newroom{
+	 position: relative; top:-2px;  height: 28px; line-height: 18px;
+}
+
+.student-info{
+	 width: 900px; float: left; margin-left: 25px;  background: #fff; border-radius: 10px
+}
+.student-info .info-box{
+	 width: 800px; float: left;; margin:20px 0 20px 50px; font-size: 15px; line-height: 35px;
+}

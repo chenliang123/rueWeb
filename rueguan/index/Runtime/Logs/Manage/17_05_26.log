@@ -1,0 +1,1397 @@
+[ 2017-05-26T09:29:53+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/Login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0270s ]
+SQL: SELECT `pwd`,`type`,`schoolid` FROM `edu_user` WHERE ( (account='liutong' or phone='liutong') and type=4 ) LIMIT 1   [ RunTime:0.0250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T09:46:06+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T09:46:08+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='xiti' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T09:46:08+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='handon' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5372 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5386 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5368 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5364 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5379 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5374 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5363 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5370 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5380 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5365 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5384 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5385 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5371 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5366 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5355 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5378 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5359 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5387 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5369 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5383 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5357 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5361 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5375 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5374 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 5368 LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T09:48:37+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.1530s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.1510s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T09:52:41+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-26T09:53:58+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T10:01:05+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T10:02:57+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T10:04:03+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T10:05:47+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T10:06:17+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T10:06:47+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T10:10:34+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T10:16:09+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T10:16:34+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T10:17:43+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T10:17:44+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T10:26:21+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T10:31:59+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T10:32:35+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0210s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T10:32:55+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T10:34:46+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/OutLogin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T10:34:53+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/Login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0120s ]
+SQL: SELECT `pwd`,`type`,`schoolid` FROM `edu_user` WHERE ( (account='liutong' or phone='liutong') and type=4 ) LIMIT 1   [ RunTime:0.0130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T10:57:12+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0650s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0170s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T10:57:53+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0160s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0210s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T10:58:51+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T11:28:46+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0160s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.1310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T11:29:15+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T11:29:49+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T11:30:41+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T11:34:11+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0920s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0560s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T11:34:13+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='xiti' and lessonid=13637 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T11:34:18+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0160s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=13643 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T11:34:26+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.1390s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=13655 ) ORDER BY id desc  [ RunTime:0.1670s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T11:35:01+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0900s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T11:57:14+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-05-26T14:05:47+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T14:05:48+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T14:21:22+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-05-26T14:21:33+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T14:22:02+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0170s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T14:25:49+08:00 ] 127.0.0.1 /index.php/Manage/Index/CourseInfo/lensson/13212/class/1679/date/20170517
+ERR: SQLSTATE[HY000] [2006] MySQL server has gone away
+
+[ 2017-05-26T14:25:51+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0190s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='handon' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0170s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7986 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7985 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7994 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8017 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7981 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7999 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7989 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8023 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7991 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8010 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0260s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8010 LIMIT 1   [ RunTime:0.0250s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8016 LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8021 LIMIT 1   [ RunTime:0.0180s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8011 LIMIT 1   [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-26T14:26:15+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+
+[ 2017-05-26T14:26:26+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T14:26:28+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T14:30:57+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T14:30:58+08:00 ] 127.0.0.1 /index.php/Manage/Index/CourseInfo/lensson/13212/class/1679/date/20170517
+ERR: SQLSTATE[HY000] [2002] 您的主机中的软件中止了一个已建立的连接。
+
+
+[ 2017-05-26T14:31:09+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T14:46:44+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T14:49:13+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T14:52:48+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T14:53:38+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:05:31+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='handon' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0130s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7986 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7985 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7994 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8017 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7981 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7999 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7989 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8023 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7991 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8010 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8010 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8016 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8021 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8011 LIMIT 1   [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:06:12+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:08:37+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:09:46+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-26T15:11:44+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:12:18+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-05-26T15:17:48+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:19:12+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:19:30+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:20:16+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:23:38+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-05-26T15:23:57+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:24:36+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:24:49+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:25:08+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:25:28+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:25:58+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-05-26T15:26:33+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:27:33+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0150s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:29:02+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0160s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:31:23+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:31:48+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:31:50+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0150s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='xiti' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:32:27+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0190s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:33:24+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0170s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='xiti' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:34:15+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:37:08+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:37:08+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='xiti' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:37:09+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='handon' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0140s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7986 LIMIT 1   [ RunTime:0.0150s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7985 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7994 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8017 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7981 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7999 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7989 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8023 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7991 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8010 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8010 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8016 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8021 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8011 LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:37:10+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:37:11+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-26T15:37:14+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:37:17+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:37:23+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-05-26T15:37:24+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0090s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='xiti' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-26T15:37:24+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0220s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='handon' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0240s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0330s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7986 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7985 LIMIT 1   [ RunTime:0.0170s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7994 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8017 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7981 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7999 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7989 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8023 LIMIT 1   [ RunTime:0.0240s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7991 LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8010 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8010 LIMIT 1   [ RunTime:0.0140s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8016 LIMIT 1   [ RunTime:0.0160s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8021 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8011 LIMIT 1   [ RunTime:0.0090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:37:25+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:37:26+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:37:33+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:37:34+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:37:34+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0210s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:37:36+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='handon' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7986 LIMIT 1   [ RunTime:0.0300s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7985 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7994 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8017 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7981 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7999 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7989 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8023 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7991 LIMIT 1   [ RunTime:0.0190s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8010 LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8010 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8016 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8021 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8011 LIMIT 1   [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:37:36+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='xiti' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:37:37+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:37:55+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:38:13+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:38:16+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:38:18+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:39:03+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/Login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0130s ]
+SQL: SELECT `pwd`,`type`,`schoolid` FROM `edu_user` WHERE ( (account='liutong' or phone='liutong') and type=4 ) LIMIT 1   [ RunTime:0.0150s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:39:12+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0130s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=13563 ) ORDER BY id desc  [ RunTime:0.0250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:39:21+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13563 ) ORDER BY id desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:39:55+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:39:56+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0170s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:39:57+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:40:06+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:40:18+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:40:19+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0130s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='xiti' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-05-26T15:40:20+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0140s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:40:30+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:40:50+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0120s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-26T15:43:07+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0100s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:43:09+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='xiti' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:43:11+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='handon' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0130s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7986 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7985 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7994 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8017 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7981 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7999 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7989 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8023 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7991 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8010 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8010 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8016 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8021 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8011 LIMIT 1   [ RunTime:0.0130s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:43:12+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0130s ]
+SQL: SELECT `uptime`,`result` FROM `edu_lesson_record` WHERE ( action='camera' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:43:13+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0140s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='xiti' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-05-26T15:43:14+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='handon' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `edu_user` [ RunTime:0.0170s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7986 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7985 LIMIT 1   [ RunTime:0.0080s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7994 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8017 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7981 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7999 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7989 LIMIT 1   [ RunTime:0.0130s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8023 LIMIT 1   [ RunTime:0.0120s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 7991 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8010 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8010 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8016 LIMIT 1   [ RunTime:0.0090s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8021 LIMIT 1   [ RunTime:0.0110s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT `name` FROM `edu_user` WHERE `id` = 8011 LIMIT 1   [ RunTime:0.0160s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:43:14+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='fopen' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0110s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:43:15+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0160s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T15:43:22+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='Draw' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-05-26T15:43:51+08:00 ] 127.0.0.1 /index.php/Manage/Ajax/GetLessonElement
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `edu_lesson_record` [ RunTime:0.0110s ]
+SQL: SELECT `id`,`uptime`,`result` FROM `edu_lesson_record` WHERE ( action='xiti' and lessonid=13212 ) ORDER BY id desc  [ RunTime:0.0100s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-05-26T17:19:42+08:00 ] 127.0.0.1 /index.php/Manage/Index
+ERR: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+
+[ 2017-05-26T18:23:53+08:00 ] 127.0.0.1 /index.php/Manage/Index/countReport/schoolid/94/page/4
+ERR: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+
+[ 2017-05-26T18:25:46+08:00 ] 127.0.0.1 /index.php/Manage/Index/countReport/schoolid/94/page/0
+ERR: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+
+[ 2017-05-26T18:26:14+08:00 ] 127.0.0.1 /index.php/Manage/Index/countReport/schoolid/94/page/0
+ERR: SQLSTATE[HY000] [2002] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败。
+
+

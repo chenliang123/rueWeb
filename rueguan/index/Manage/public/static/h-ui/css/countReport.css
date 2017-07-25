@@ -1,0 +1,15 @@
+body{overflow: hidden;}
+.countDate{position: absolute;top: 83px;right: 150px;z-index: 13;}
+.countInfo{position: relative;}
+.countInfo .panel-header{height: 36px;line-height:36px;background:#F2F2F2;font-size: 1.3em;}
+.countInfo .panel-body{ padding: 0;
+						height: 500px;
+					    overflow: hidden;
+					    overflow-y: scroll;
+					  }
+.countInfo tr{height: 40px;}
+.countInfo th{text-align: center;height: 40px;padding: 0;}
+.countInfo td{text-align: center;height: 40px;padding: 0;}
+.countInfo .table-striped tbody > tr:nth-child(odd) > td, .table-striped tbody > tr:nth-child(odd) > th{background: #fff;}
+.fixed-Rep{position:absolute;width: 944px;background-color: #f9f9f9;top: 53px;left: -1px;box-shadow: none;border-bottom-left-radius: 0;border-bottom-right-radius: 0;}
+.fixed-Rep th{width: 118px;}

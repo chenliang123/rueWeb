@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}lib/html5shiv.js"></script>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}lib/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="{$Think.const.PLANCLASS}resources/static/h-ui/css/H-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="{$Think.const.PLANCLASS}resources/lib/Hui-iconfont/1.0.8/iconfont.min.css" />
+		<link rel="stylesheet" type="text/css" href="{$Think.const.PLANCLASS}resources/css/app.css?id=2" />
+		<!--[if lt IE 9]>
+		<link href="{$Think.const.PLANCLASS}static/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+		<![endif]-->
+		<!--[if IE 6]>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+		<script>DD_belatedPNG.fix('*');</script>
+		<![endif]-->
+		<title>如e教育 - 学校管理系统</title>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}resources/lib/jquery/1.9.1/jquery.min.js"></script> 
+        <script type="text/javascript" src="{$Think.const.PLANCLASS}resources/static/h-ui/js/H-ui.min.js"></script>
+        <script type="text/javascript" src="{$Think.const.PLANCLASS}resources/lib/layer/layer.js" ></script>
+        <script type="text/javascript" src="{$Think.const.PLANCLASS}resources/lib/My97DatePicker/4.8/WdatePicker.js" ></script>
+        <script src="{$Think.const.PLANCLASS}resources/js/app.js?id=1130"></script>
+        <script>
+        	$(function(){
+        		 $("#menulist>li>span").off().on("click",function(){
+        		 	  var obj = $(this).parent("li");
+        		 	  showMenu(obj)
+        		 });
+
+        		 $("#define").off().on("click",function(){
+                      GetInputData();
+        		 })
+        		 
+        	})
+        </script>
+	</head>
+	<body data-schoolid = "{$out.schoolid}" data-ajax="__APP__/PlanClass/Ajax/">
+      <section class="all-body">
+		 <block name="include"><include file="head" /></block><!--进入公用模版-->
+		<div class="content-body">
+			<div class="left">
+			 <block name="include"><include file="left" /></block>
+			</div>
+			<div class="right">
+				<div class="art-body">
+					 <table class="table table-border table-bordered table-hover radius">					 	
+					 	<tr>
+					 	    <th>名称</th>
+					 		<th>年级</th>
+					 		<th>科目</th>
+					 		<th>类型</th>
+					 		<th width="200">每周课时数</th>
+					 	</tr>
+					 	<volist name="list" id="vo">
+					 	<tr>
+					 	    <td>{$vo.name}</td>
+					 		<td>{$vo.grade|SetGrage}</td>
+					 		<td>{$vo.courseid|GetCourseName}</td>
+					 		<td>{$vo.type|SetCourseType}</td>					 		
+					 		<td ><input type="text" data-id="{$vo.id}" id="input-{$vo.id}" value="{$vo.weeklessoncount}" class="input-text radius size-MINI fenbaninput"/></td>
+					 		
+					 	</tr>
+					    </volist>
+					 </table>
+					 <div class="table-bottom">
+					 	<div class="sub-left">
+					 		<div class="check-box">
+				              
+				            </div>
+					 	</div>
+					 	<div class="sub-right">
+					 		<a class="btn btn-secondary radius" id="define">确定</a>
+					 	</div>
+					 </div>
+					 <div class="page">
+	                    {$page}
+				  	 </div>
+				</div>
+			</div>
+		</div>
+	 </section>
+	</body>
+</html>

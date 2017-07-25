@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}lib/html5shiv.js"></script>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}lib/respond.min.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="{$Think.const.PLANCLASS}resources/static/h-ui/css/H-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="{$Think.const.PLANCLASS}resources/lib/Hui-iconfont/1.0.8/iconfont.min.css" />
+		<link rel="stylesheet" type="text/css" href="{$Think.const.PLANCLASS}resources/css/app.css?id=2" />
+		<!--[if lt IE 9]>
+		<link href="{$Think.const.PLANCLASS}static/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+		<![endif]-->
+		<!--[if IE 6]>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+		<script>DD_belatedPNG.fix('*');</script>
+		<![endif]-->
+		<title>如e教育 - 学校管理系统</title>
+		<script type="text/javascript" src="{$Think.const.PLANCLASS}resources/lib/jquery/1.9.1/jquery.min.js"></script> 
+        <script type="text/javascript" src="{$Think.const.PLANCLASS}resources/static/h-ui/js/H-ui.min.js"></script>
+        <script type="text/javascript" src="{$Think.const.PLANCLASS}resources/lib/layer/layer.js" ></script>
+        <script type="text/javascript" src="{$Think.const.PLANCLASS}resources/lib/My97DatePicker/4.8/WdatePicker.js" ></script>
+        <script src="{$Think.const.PLANCLASS}resources/js/app.js?id=11320"></script>
+        <script>
+        	$(function(){
+        		 $("#menulist>li>span").off().on("click",function(){
+        		 	  var obj = $(this).parent("li");
+        		 	  showMenu(obj)
+        		 });
+        		 $("#startplan").off().on("click",function(){
+        		 	  layer.msg('排课过程可能较慢，请勿刷新页面。确定排课？', {
+				        time: 0 //不自动关闭
+				        ,btn: ['确定', '关闭']
+				        ,yes: function(index){
+				          layer.close(index);
+				           $data.paike($(this));
+				        }
+				      })
+        		 	 
+        		 })
+        	})
+        </script>
+	</head>
+	<body data-schoolid = "{$out.schoolid}" data-ajax="__APP__/PlanClass/Ajax/">
+	  <section class="all-body">
+		 <block name="include"><include file="head" /></block><!--进入公用模版-->
+		<div class="content-body">
+			<div class="left">
+			 <block name="include"><include file="left" /></block>
+			</div>
+			<div class="right">
+			  <div class="art-body">
+			  	<div class="info-body">
+			  		<div class="title">教室总数：{$out.classroom}间&nbsp;&nbsp;&nbsp;班级总数：{$out.classnum}个&nbsp;&nbsp;&nbsp;教师总数：{$out.teachernum}位&nbsp;&nbsp;&nbsp;科目总数：{$out.course}科</div>
+			  		<div class="info-box">
+			  			<div class="info">
+			  				<div class="top">教室实际课时周容量</div>
+			  				<div class="center">{$out.crl}节</div>
+			  				<div class="bottom">禁排{$out.cjp}节</div>
+			  			</div>
+			  			<div class="info">
+			  				<div class="top">周课程消耗课时数</div>
+			  				<div class="center">{$out.countlesson}节</div>
+			  				<div class="bottom">体育、实验课等无场地要求</div>
+			  			</div>
+			  		</div>
+			  	</div>
+			  	<div class="btn-box">
+			  		<a class="btn btn-secondary radius" id="startplan" data-ismark="0" style="width: 150px;">开始排课<img src="{$Think.const.PLANCLASS}resources/img/loading.gif"  style="display:none"/></a>
+			  	</div>
+			  </div>
+			</div>
+		</div>
+	  </section>
+	</body>
+</html>

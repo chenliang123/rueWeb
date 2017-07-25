@@ -1,0 +1,408 @@
+$(function(){
+	var h = $(window).height();
+	$(".cb-left").css({"height":(h-61)+"px"});	
+	$(".cb-right").css({"min-height":(h-61)+"px"});
+
+    $(".header>.right").off().on("click",function(){
+    	 var dis = $(this).children(".outlogin").css("display");
+    	 if (dis=="none")  {
+    	 	$(this).children(".outlogin").fadeIn().off().on("click",function(){
+    	 		$.post("/index.php/Manage/Ajax/OutLogin",{},function(out){
+    	 			console.log(out);
+    	 			$fc.goURL("/index.php/Manage/Index/login");
+    	 		})
+    	 	});
+
+      	} 
+    	else $(this).children(".outlogin").fadeOut();
+    })
+
+});
+
+
+function indexchart(){		
+	var week = $("body").attr("data-week");
+	var d = getPreviousWeekStartEnd(week);
+	$mc.GetDateWeek(d.start,d.end);	
+
+
+    //给查看详情挂载点击事件
+    $("#info").off().on("click",function(){
+    	 var url = $(this).data("url");
+         var day = $("body").attr("data-day");
+     	 $fc.goURL(url+"/day/"+day+"/classid/0");
+    })
+
+}
+
+function login(){
+	 console.log($("#checkbox").is(':checked'));
+	 var username = $("#username").val();
+	 var password = $("#password").val();
+	 if (username=="") layer.msg("请输入用户名或手机号");
+	 else if (password=="")  layer.msg("请输入登录密码");
+	 else{
+	 	 $.post("../Ajax/Login",{
+	 	 	"username":username,
+	 	 	"password":password,
+	 	 	"ismemory":$("#checkbox").is(':checked')
+	 	 },function(out){
+	 	 	if (out==0) layer.msg("用户名错误");
+	 	 	else if (out==1)  layer.msg("密码错误");
+	 	 	else
+	 	 	{
+	 	 	    $fc.goURL("index");
+	 	 	}
+	 	 })
+	 }
+}
+
+$mc = {
+	 GetDateWeek:function(start,end){	 	
+		var schoolid = $("body").data("schoolid");
+		$data.weekdata(start,end,schoolid,function(out){
+			console.log(out);
+		   var arr = out.data.daylist;
+		   var avg = out.data.avg;
+		   var dateArr = new Array();
+		   var dataArr = new Array();
+		   $.each(arr,function(i,a){
+		   	   dateArr.push($mc.SetDateWeek(i,a.day.toString()));	
+		   	   dataArr.push(a.lesson);   	  
+		   });	 
+
+		   indexChart(dateArr,dataArr,arr,avg);
+
+           //获取当日数据
+           var mydate = new Date();
+           var today = mydate.getFullYear()+""+getNum_0((mydate.getMonth()+1))+""+getNum_0(mydate.getDate());
+
+            $mc.GetDataToday(today,arr,avg);
+             
+            var titleobj = $(".chart-title");
+             var week = titleobj.attr("data-week");
+		   //挂载上一周下一周的点击事件
+		   $("#upweek").off().on("click",function(){
+		   	   var week = titleobj.attr("data-week");		   	   
+		   	   titleobj.attr("data-week",(week-1));
+		   	   $("#nextweek").css({"color":"#325ddd","cursor":"pointer"});
+		   	   var week = $("body").attr("data-week");
+		   	   var w = parseInt(week)+1;
+		   	   $("body").attr("data-week",w);		   	   
+               var d = getPreviousWeekStartEnd(w);
+	           $mc.GetDateWeek(d.start,d.end);
+
+		   })
+		   if(week==0){
+		   	   titleobj.attr("data-week","0");
+		   	  $("#nextweek").css({"color":"#999","cursor":"default"}).off();
+		   }
+		   else{
+
+			   $("#nextweek").off().on("click",function(){
+			   	    var week = titleobj.attr("data-week");
+			   	   titleobj.attr("data-week",(parseInt(week)+1))
+			   	   var week = $("body").attr("data-week");
+			   	   var w = parseInt(week)-1;
+			   	   $("body").attr("data-week",w);		   	   
+	               var d = getPreviousWeekStartEnd(w);
+		           $mc.GetDateWeek(d.start,d.end);
+			   }).css({"color":"#325ddd","cursor":"pointer"});
+		   }
+
+            console.log(week);
+		})
+	 },
+	 GetDataToday:function(today,datalist,avg){
+	 	$("body").attr("data-day",today);
+         $.each(datalist,function(i,a){         	
+         	  if (today==a.day) {
+         	  	  $(".info-body-title").html("&nbsp;&nbsp;"+today.substr(0,4)+"年"+today.substr(4,2)+"月"+today.substr(6,2)+"日；使用课时数："+a.lesson+"，使用率："+ toDecimal2(a.lessonRatio)+"%")
+                  $("#handon").html(SetHtml(a.handon,avg.nhandon));
+                  $("#xiti").html(SetHtml(a.xiti,avg.nxiti));
+                  $("#callname").html(SetHtml(a.callname,avg.ncallname));
+                  $("#reward").html(SetHtml(a.reward,avg.nreward));
+                  $("#photo").html(SetHtml(a.photo,avg.npic));
+                  $("#draw").html(SetHtml(a.draw,avg.ndraw));
+         	  	  return false;
+         	  }
+         })
+         function SetHtml(todaypx,avgpx){
+             var html ="<div class=\"pb-sub\">"+
+						   "<div class=\"top\"  style=\"bottom: "+(parseInt(SetPX(todaypx))+20)+"px;\">"+todaypx+"</div>"+
+						   "<div class=\"center "+(todaypx>=avgpx?"many":"less")+"\" style=\"height: "+ parseInt(SetPX(todaypx))+"px;\"></div>"+
+						   "<div class=\"bottom\">当日</div>"+
+						"</div>"+
+						"<div class=\"pb-sub\">"+
+							 "<div class=\"top\"  style=\"bottom: "+(parseInt(SetPX(avgpx))+20)+"px;\">"+avgpx+"</div>"+
+						     "<div class=\"center history\" style=\"height: "+ parseInt(SetPX(avgpx))+"px;\"></div>"+
+							"<div class=\"bottom\">历史平均</div>"+
+						"</div>";
+			return html;
+         }
+         function SetPX(px){         	
+		    var p =0;
+		    if (px>0) {p = parseInt(px)+20}
+		    else if (px>=150) {p=150}    
+
+            if (p>=150) p=150;
+
+		    return p;
+		 }
+
+	 },
+	 SetDateWeek:function(i,d){
+	 	 var str = d.substr(2,2)+"/"+d.substr(4,2)+"/"+d.substr(6,2);
+	 	 var week ="";
+	 	 if (i==0) week ="(周一)";
+	 	 else if (i==1) week ="(周二)";
+	 	 else if (i==2) week ="(周三)";
+	 	 else if (i==3) week ="(周四)";
+	 	 else if (i==4) week ="(周五)";
+	 	 else if (i==5) week ="(周六)";
+	 	 else if (i==6) week ="(周日)";
+	 	 return str + week;
+	 },
+	 GetLessonEle:function(v,lessonid){ //v=0 重点关注,1:课堂提问,2.课堂习题,3拍照/截图,4课件,5.批注
+        if(v==0){
+        	$("#tablebox").hide();
+        	$(".text-art").show();
+        }
+        else{
+        	layer.load(2);
+        	$("#tablebox").show();
+        	$(".text-art").hide();
+        	$.post("/index.php/Manage/Ajax/GetLessonElement",{
+        		"lessonid":lessonid,
+        		"v":v
+        	},function(out){
+        		console.log(out);
+        		$("#tablebox").html(out);
+        		layer.closeAll('loading');
+
+        	})
+        }
+	 }
+}
+function showName(obj){
+     var name = $(obj).data("name");
+     if(name==""||name=="、") layer.msg('没有学生');
+	 else layer.alert(name);
+}
+$fc = {
+	goURL:function(url){
+		window.location.href = url;
+	},
+	local:{
+		Set: function (name, value) {				
+           localStorage.setItem(name, value);           
+	    },
+	    Get: function (name) {
+	        return localStorage.getItem(name);
+	    },
+	    Del: function (name) {
+	        localStorage.removeItem(name);
+	    }
+	}
+}
+
+function getPreviousWeekStartEnd(week){
+	var now = new Date();
+    now.setDate(now.getDate() -(week * 7));
+    var nowTime = now.getTime();
+    var day = now.getDay();
+    var oneDayLong = 24 * 3600 * 1000;
+    var MondayTime = nowTime - (day - 1) * oneDayLong;
+    var SundayTime = nowTime + (7 - day) * oneDayLong;
+
+    var monday = new Date(MondayTime);
+    var sunday = new Date(SundayTime);    
+    var start = monday.getFullYear() + "" + getNum_0((monday.getMonth() + 1)) + "" + getNum_0(monday.getDate());
+    var end = sunday.getFullYear() + "" + getNum_0((sunday.getMonth() + 1)) + "" + getNum_0(sunday.getDate());
+   
+    	
+	return {start,end}
+}
+function getNum_0(num)
+{
+    if (num / 1 > 9) return num;
+    else return "0" + num;
+}
+
+function indexChart(dateArr,dataArr,arr,avg){
+	var myChart  = echarts.init(document.getElementById("chart"));
+	option = {			   
+		    tooltip : {
+		        trigger: 'axis'
+		    },
+		    grid: {
+		        left: '3%',
+		        right: '4%',
+		        bottom: '3%',
+		        containLabel: true
+		    },
+		    xAxis : [
+		        {
+
+		            type : 'category',
+		            boundaryGap : false,
+		            data :dateArr// ['周一','周二','周三','周四','周五']
+		        }
+		    ],
+		    yAxis : [
+		        {
+		        	name:"使用课时数",
+		            type : 'value'
+		        }
+		    ],
+		    series : [
+		        {
+		            name:'使用课时数',
+		            type:'line',
+		            stack: '使用课时数',
+		            areaStyle: {normal: { color:'#7699ff'}},
+		            itemStyle :{normal:{ color:'#295ffe',  lineStyle:{color:'#295ffe'  },label : {show: true}}},
+		            
+		            data:dataArr
+		        }
+		    ]
+	};		
+	myChart.on("click",function(param){
+		$mc.GetDataToday("20"+param.name.substr(0,8).replace(/\//g, ''),arr,avg);
+	})
+	myChart.setOption(option);
+}
+
+
+var isNav = (window.navigator.appName.toLowerCase().indexOf("netscape")>=0);
+var isIE = (window.navigator.appName.toLowerCase().indexOf("microsoft")>=0);
+function coursefc(){
+  $(".textarea").off().on("click",function(){
+  	  $("#text-div").hide();
+  	  $(".textarea").animate({
+  	  	  height:"150px"
+  	  },200,function(){
+  	  	  $(".text-box,.text-box>textarea").animate({height:"140px"},200,function(){
+  	  	  	 
+  	  	  });
+  	  	  $(".btn-list").show(200,function(){
+  	  	  	  $(".closes").off().on("click",function(){ //关闭按钮
+  	  	  	  	  $(".textarea").animate({
+  	  	  	  	  	 height:"40px"		  	  	  	  	  	
+  	  	  	  	  },200,function(){
+  	  	  	  	  	  $(".text-box,.text-box>textarea").animate({height:"0px"},200,function(){
+  	  	  	  	  	  	  // console.log($("#myid").val());
+  	  	  	  	  	  	    $("#text-div").show();
+  	  	  	  	  	  	    $(".btn-list").hide();
+  	  	  	  	  	  })
+  	  	  	  	  })
+  	  	  	  });
+  	  	  	  $(".saves").off().on("click",function(){ //保存按钮
+  	  	  	  	  //发送ajax请求 
+  	  	  	  	  $(".textarea").animate({
+  	  	  	  	  	 height:"40px"		  	  	  	  	  	
+  	  	  	  	  },200,function(){
+  	  	  	  	  	  $(".text-box,.text-box>textarea").animate({height:"0px"},200,function(){
+  	  	  	  	  	  	  // console.log($("#myid").val());
+  	  	  	  	  	  	    $("#text-div").show().html($("#myid").val());
+  	  	  	  	  	  	    $(".btn-list").hide();
+  	  	  	  	  	  })
+  	  	  	  	  })
+  	  	  	  })
+  	  	  });
+  	  })
+  	  
+  })
+
+ 
+}
+
+function setFocus() {
+       var range = this.createTextRange(); //建立文本选区
+        range.moveStart('myid', this.value.length); //选区的起点移到最后去
+        range.collapse(true);
+       range.select();
+  }
+	 function myfocus(myid) {
+    if(isNav){
+          document.getElementById(myid).focus();// 获取焦点  
+  
+    }else{
+       setFocus.call(document.getElementById(myid));
+    }
+  }
+
+ function toDecimal2(x) { 
+      var f = parseFloat(x); 
+      if (isNaN(f)) { 
+        return false; 
+      } 
+      var f = Math.round(x*100)/100; 
+      var s = f.toString(); 
+      var rs = s.indexOf('.'); 
+      if (rs < 0) { 
+        rs = s.length; 
+        s += '.'; 
+      } 
+      while (s.length <= rs + 2) { 
+        s += '0'; 
+      } 
+      return s; 
+ }
+
+
+ function BrowserName(){
+ 	 var name = $.browser.name;
+ 	 console.log(name);
+ 	 if (name!="chrome" && name!="firefox") {
+ 	 	 alert("123");
+ 	 	 var w = $(document).width();
+ 	 	 var html ="<div class='browser-msg' style=\"left:"+((w-500)/2)+"px\">当前浏览器为IE或IE内核的浏览器可能出现部分功能不支持，建议使用谷歌或者火狐 <i class=\"Hui-iconfont\">&#xe60b;</i></div>"
+ 	 	 $("body").append(html);
+ 	 	 $(".browser-msg>.Hui-iconfont").off().on("click",function(){
+ 	 	 	 $(".browser-msg").remove();
+ 	 	 })
+ 	 }
+ }
+
+
+
+ function getTableData(){
+
+	var obj = $("#tbodyhtml");	
+	
+	var json ="{\"data\":[";
+	var trjson ="";
+	
+	for (var i = 0; i <obj.children("tr").length; i++) {
+	    var _tr = obj.children("tr:eq("+i+")")
+        var _tr_display = _tr.css("display");
+
+       
+	    if(_tr_display!="none"){
+	    	 
+	    	trjson +="{\"id\":\""+_tr.data("id")+"\",\"name\":\""+encodeURI(_tr.data("name"))+"\",";
+	    	var tdjson ="";
+            for(var j=1; j<_tr.children("td").length; j++){
+            	var _td = _tr.children("td:eq("+j+")");
+            	var _td_display = _td.css("display");
+            	if(_td_display!="none"){
+                    tdjson += "\""+_td.data("field")+"\":\""+_td.html()+"\",";
+            	}
+
+
+            }
+           
+             if(tdjson.length>0) tdjson = tdjson.substr(0,tdjson.length-1);   
+           
+           
+            trjson += tdjson+"},";        
+	    }
+	 
+	}
+	 if(trjson.length>0) trjson = trjson.substr(0,trjson.length-1);  
+
+     var outjson = json+trjson+"]}";
+     
+     return outjson;
+}
