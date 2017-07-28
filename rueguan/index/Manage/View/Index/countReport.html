@@ -11,7 +11,7 @@
 <link href="{$Think.const.MANAGE}lib/Hui-iconfont/1.0.8/iconfont.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="{$Think.const.MANAGE}lib/icheck/icheck.css" />
 <link href="{$Think.const.MANAGE}static/h-ui/css/app.css?id=1" rel="stylesheet" type="text/css"/>
-<link href="{$Think.const.MANAGE}static/h-ui/css/countReport.css?11" rel="stylesheet" type="text/css"/>
+<link href="{$Think.const.MANAGE}static/h-ui/css/countReport.css?18" rel="stylesheet" type="text/css"/>
 <!--[if lt IE 9]>
 <link href="static/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
 <![endif]-->
@@ -91,7 +91,7 @@
 <script type="text/javascript" src="{$Think.const.MANAGE}lib/echarts/myechart.js?123"></script>
 <script type="text/javascript" src="{$Think.const.MANAGE}static/h-ui/js/data.js?id=2"></script>
 <script type="text/javascript" src="{$Think.const.MANAGE}static/h-ui/js/app.js?is=126"></script>
-<script type="text/javascript" src="{$Think.const.MANAGE}static/h-ui/js/report.js?is=131"></script>
+<script type="text/javascript" src="{$Think.const.MANAGE}static/h-ui/js/report.js?is=150"></script>
 <script type="text/javascript" src="{$Think.const.MANAGE}static/h-ui/js/tableToExcel.js?is=121"></script>
 <script>
 	
@@ -128,7 +128,7 @@
 			$data.getReport1(dayfrom,dayto,days,schoolid,function(out){
 		    	var dataArr = out.data;
 		    	$(".panel-header").html("教师如e课时和课堂积分累计表");
-//		    	html = "<div class='panel-header'>教师如e课时和课堂积分累计表</div><table class='table table-border table-striped fixed-Rep'><thead><tr><th>姓名</th><th>年级</th><th>科目</th><th>课表课时数</th><th>如e课时数</th><th>如e课时数比例</th><th>课堂积分</th><th>课均积分</th></tr></thead></table><div class='panel-body'><table class='table table-border table-striped'><thead><tr><th>姓名</th><th>年级</th><th>科目</th><th>课表课时数</th><th>如e课时数</th><th>如e课时数比例</th><th>课堂积分</th><th>课均积分</th></tr></thead><tbody>";
+		    	html = "<div class='panel-header'>教师如e课时和课堂积分累计表</div><div class='panel-body'><div class='chart-box' id='chart' style='width: 960px;height: 450px;margin-top: 34px;'></div><div class='tableData'><table class='table table-border table-striped'><thead><tr><th>姓名</th><th>年级</th><th>科目</th><th>课表课时数</th><th>如e课时数</th><th>如e课时数比例</th><th>课堂积分</th><th>课均积分</th></tr></thead><tbody>";
 		    	var tempIndex = 0;
 		    	for(var i in dataArr){
 		    		if(!course.contains(dataArr[i].courseName)){
@@ -144,15 +144,15 @@
 		    		if(parseInt(dataArr[i].ruyiNum) > maxX){
 		    			maxX = parseInt(dataArr[i].ruyiNum);
 		    		}	
-//		    		html += "<tr><td>"+ dataArr[i].teacherName +"</td><td>"+ dataArr[i].gradeName +"</td><td>"+ dataArr[i].courseName +"</td><td>"+ dataArr[i].classNum +"</td><td>"+ dataArr[i].ruyiNum +"</td><td>"+ dataArr[i].ruyiRatio +"</td><td>"+ dataArr[i].pointSum +"</td><td>"+ dataArr[i].pointAverage +"</td></tr>"
+		    		html += "<tr><td>"+ dataArr[i].teacherName +"</td><td>"+ dataArr[i].gradeName +"</td><td>"+ dataArr[i].courseName +"</td><td>"+ dataArr[i].classNum +"</td><td>"+ dataArr[i].ruyiNum +"</td><td>"+ dataArr[i].ruyiRatio +"</td><td>"+ dataArr[i].pointSum +"</td><td>"+ dataArr[i].pointAverage +"</td></tr>"
 		    	}
 		    	maxX = parseInt(maxX*1.5);
 		    	for(var j = 0;j <= maxX;j++){
 		    		hours.push(j);
 		    	}
+		    	html += "</tbody></table></div></div></div>";
+		    	$('.countInfo').html(html);
 		    	indexChart(myData,hours,course);
-//		    	html += "</tbody></table></div></div>";
-//		    	$('.countInfo').html(html);
 		    	layer.msg('数据请求成功');
 //		    	$('.btn').off().on('click',function(){
 //		    		method5('tableExcel');
@@ -172,7 +172,7 @@
 		    	var rewardArr = [];
 		    	var photoArr = [];
 		    	var pizhuArr = [];
-//		    	html = "<div class='panel-header'>教师课堂教学行为统计表</div><table class='table table-border table-striped fixed-Rep'><thead><tr><th>教师姓名</th><th>年级</th><th>科目</th><th>如e课时数</th><th>讲授课件数<br/>(平均每课时)</th><th>互动次数<br/>(平均每课时)</th><th>提问次数<br/>(平均每课时)</th><th>点名次数<br/>(平均每课时)</th><th>出题次数<br/>(平均每课时)</th><th>奖励次数<br/>(平均每课时)</th><th>拍照次数<br/>(平均每课时)</th><th>批注次数<br/>(平均每课时)</th></tr></thead></table><div class='panel-body'><table class='table table-border table-striped'><thead><tr><th>教师姓名</th><th>年级</th><th>科目</th><th>如e课时数</th><th>讲授课件页数<br/>(平均每课时)</th><th>互动次数<br/>(平均每课时)</th><th>提问次数<br/>(平均每课时)</th><th>点名次数<br/>(平均每课时)</th><th>出题次数<br/>(平均每课时)</th><th>拍照次数<br/>(平均每课时)</th><th>批注次数<br/>(平均每课时)</th></tr></thead><tbody>";
+		    	html = "<div class='panel-header'>教师课堂教学行为统计表</div><div class='panel-body'><div class='chart-box' id='chart' style='width: 960px;height: 450px;margin-top: 34px;'></div><div class='tableData'><table class='table table-border table-striped'><thead><tr><th>教师姓名</th><th>年级</th><th>科目</th><th>如e课时数</th><th>讲授课件数<br/>(平均每课时)</th><th>互动次数<br/>(平均每课时)</th><th>提问次数<br/>(平均每课时)</th><th>点名次数<br/>(平均每课时)</th><th>出题次数<br/>(平均每课时)</th><th>奖励次数<br/>(平均每课时)</th><th>拍照次数<br/>(平均每课时)</th><th>批注次数<br/>(平均每课时)</th></tr></thead><tbody>";
 
 		    	for(var i in dataArr){
 		    		nameData.push(dataArr[i].teacherName);
@@ -183,11 +183,11 @@
 		    		questArr.push(dataArr[i].ave_xiti);
 		    		photoArr.push(dataArr[i].ave_photo);
 		    		pizhuArr.push(dataArr[i].ave_postil);
-//		    		html += "<tr><td>"+ dataArr[i].teacherName +"</td><td>"+ dataArr[i].gradeName +"</td><td>"+ dataArr[i].courseName +"</td><td>"+ dataArr[i].ruyiNum +"</td><td>"+ dataArr[i].ave_ppt +"</td><td>"+ dataArr[i].ave_interaction +"</td><td>"+ dataArr[i].ave_question +"</td><td>"+ dataArr[i].ave_callName +"</td><td>"+ dataArr[i].ave_xiti +"</td><td>"+ dataArr[i].ave_award +"</td><td>"+ dataArr[i].ave_photo +"</td><td>"+ dataArr[i].ave_postil +"</td></tr>"
-		        }
+		    		html += "<tr><td>"+ dataArr[i].teacherName +"</td><td>"+ dataArr[i].gradeName +"</td><td>"+ dataArr[i].courseName +"</td><td>"+ dataArr[i].ruyiNum +"</td><td>"+ dataArr[i].ave_ppt +"</td><td>"+ dataArr[i].ave_interaction +"</td><td>"+ dataArr[i].ave_question +"</td><td>"+ dataArr[i].ave_callName +"</td><td>"+ dataArr[i].ave_xiti +"</td><td>"+ dataArr[i].ave_award +"</td><td>"+ dataArr[i].ave_photo +"</td><td>"+ dataArr[i].ave_postil +"</td></tr>"
+		       }		    	
+		    	html += "</tbody></table></div></div></div>";
+		    	$('.countInfo').html(html);
 		    	indexChart2(nameData,pageArr,interArr,tiwenArr,callArr,questArr,rewardArr,photoArr,pizhuArr);
-//		    	html += "</tbody></table></div></div>";
-//		    	$('.countInfo').html(html);
 		    	layer.msg('数据请求成功');
 		    });
 	   }else if(page == '2'){
@@ -195,7 +195,7 @@
 		    	var dataArr = out.data;
 //		    	console.log(dataArr)
 				$(".panel-header").html("教师课堂教学动作时长比例表");
-//		    	html = "<div class='panel-header'>教师课堂教学动作时长比例表</div><table class='table table-border table-striped fixed-Rep'><thead><tr><th>教师姓名</th><th>年级</th><th>科目</th><th>如e课时数</th><th>讲授课件时长比例<br/>(平均每课时)</th><th>提问时长比例<br/>(平均每课时)</th><th>出题时长比例<br/>(平均每课时)</th><th>其他如e时长比例<br/>(平均每课时)</th><th>非如e时长比例<br/>(平均每课时)</th></tr></thead></table><div class='panel-body'><table class='table table-border table-striped'><thead><tr><th>教师姓名</th><th>年级</th><th>科目</th><th>如e课时数</th><th>讲授课件页数</th><th>互动次数</th><th>提问次数</th><th>点名次数</th><th>出题次数</th></tr></thead><tbody>";
+		    	html = "<div class='panel-header'>教师课堂教学动作时长比例表</div><div class='panel-body'><div class='chart-box' id='chart' style='width: 960px;height: 450px;margin-top: 34px;'></div><div class='tableData'><table class='table table-border table-striped'><thead><tr><th>教师姓名</th><th>年级</th><th>科目</th><th>如e课时数</th><th>讲授课件时长比例<br/>(平均每课时)</th><th>提问时长比例<br/>(平均每课时)</th><th>出题时长比例<br/>(平均每课时)</th><th>其他如e时长比例<br/>(平均每课时)</th><th>非如e时长比例<br/>(平均每课时)</th></tr></thead><tbody>";
 				var nameData = [];
 				var teachArr = [];
 				var askArr = [];
@@ -217,10 +217,10 @@
 			    		noArr.push(parseFloat(dataArr[i].ave_noruyi_ratio).toFixed(2)-0);
 					}
 		    		bAdd = true;
-//		    		html += "<tr><td>"+ dataArr[i].teacherName +"</td><td>"+ dataArr[i].gradeName +"</td><td>"+ dataArr[i].courseName +"</td><td>"+ dataArr[i].lessonNums +"</td><td>"+ dataArr[i].ave_ppt_ratio +"</td><td>"+ dataArr[i].ave_handon_ratio +"</td><td>"+ dataArr[i].ave_xiTi_ratio +"</td><td>"+ dataArr[i].ave_qtruyi_radio +"</td><td>"+ dataArr[i].ave_noruyi_ratio +"</td></tr>";
+		    		html += "<tr><td>"+ dataArr[i].teacherName +"</td><td>"+ dataArr[i].gradeName +"</td><td>"+ dataArr[i].courseName +"</td><td>"+ dataArr[i].lessonNums +"</td><td>"+ dataArr[i].ave_ppt_ratio +"</td><td>"+ dataArr[i].ave_handon_ratio +"</td><td>"+ dataArr[i].ave_xiTi_ratio +"</td><td>"+ dataArr[i].ave_qtruyi_radio +"</td><td>"+ dataArr[i].ave_noruyi_ratio +"</td></tr>";
 		    	}
-//		    	html += "</tbody></table></div></div>";
-//		    	$('.countInfo').html(html);
+		    	html += "</tbody></table></div></div></div>";
+		    	$('.countInfo').html(html);
 				indexChart3(nameData,teachArr,askArr,xitiArr,elseArr,noArr);
 		    	layer.msg('数据请求成功');
 //		    	console.log(out)
@@ -230,7 +230,7 @@
 		    	var dataArr = out.data;
 		    	console.log(dataArr)
 		    	$(".panel-header").html("教师课堂互动均衡度统计表");
-//		    	html = "<div class='panel-header'>教师课堂互动均衡度统计表</div><table class='table table-border table-striped fixed-Rep'><thead><tr><th>姓名</th><th>年级</th><th>科目</th><th>如e课时数</th><th>学生课均参与互动均衡度</th><th>学生课均被点名均衡度</th><th>学生课均获奖励均衡度</th></tr></thead></table><div class='panel-body'><table class='table table-border table-striped'><thead><tr><th>姓名</th><th>年级</th><th>科目</th><th>如e课时数</th><th>学生课均参与互动均衡度</th><th>学生课均被点名均衡度</th><th>学生课均获奖励均衡度</th></tr></thead><tbody>";
+		    	html = "<div class='panel-header'>教师课堂互动均衡度统计表</div><div class='panel-body'><div class='chart-box' id='chart' style='width: 960px;height: 450px;margin-top: 34px;'></div><div class='tableData'><table class='table table-border table-striped'><thead><tr><th>姓名</th><th>年级</th><th>科目</th><th>如e课时数</th><th>学生课均参与互动均衡度</th><th>学生课均被点名均衡度</th><th>学生课均获奖励均衡度</th></tr></thead><tbody>";
 		    	var nameData = [];
 		    	var interArr = [];
 		    	var callArr = [];
@@ -240,41 +240,54 @@
 		    		interArr.push(dataArr[i].ave_interaction);
 		    		callArr.push(dataArr[i].ave_callName);
 		    		rewardArr.push(dataArr[i].ave_award);
-//		    		html += "<tr><td>"+ dataArr[i].teacherName +"</td><td>"+ dataArr[i].gradeName +"</td><td>"+ dataArr[i].courseName +"</td><td>"+ dataArr[i].ruyiNum +"</td><td>"+ dataArr[i].ave_interaction +"</td><td>"+ dataArr[i].ave_callName +"</td><td>"+ dataArr[i].ave_award +"</td></tr>"
+		    		html += "<tr><td>"+ dataArr[i].teacherName +"</td><td>"+ dataArr[i].gradeName +"</td><td>"+ dataArr[i].courseName +"</td><td>"+ dataArr[i].ruyiNum +"</td><td>"+ dataArr[i].ave_interaction +"</td><td>"+ dataArr[i].ave_callName +"</td><td>"+ dataArr[i].ave_award +"</td></tr>"
 		    	}
+		    	html += "</tbody></table></div></div>";
+		    	$('.countInfo').html(html);
 		    	indexChart4(nameData,interArr,callArr,rewardArr);
-//		    	html += "</tbody></table></div></div>";
-//		    	$('.countInfo').html(html);
 		    	layer.msg('数据请求成功');
 //		    	console.log(out)
 		    });
 	   }else if(page == '4'){
 	   		$data.getReport5('20170500','20170531','32',schoolid,function(out){
 		    	var dataArr = out.data.dataList;
+		    	var nameArr = [];
+		    	var takepartArr = [];
+		    	var balanceArr = [];
 		    	console.log(dataArr)
 		    	$(".panel-header").html("班级学生互动表现统计表");
-//		    	html = "<div class='panel-header'>班级学生互动表现统计表</div><table class='table table-border table-striped fixed-Rep'><thead><tr><th>班级</th><th>学生数</th><th>课表课时数</th><th>如e课时数</th><th>课均互动次数</th><th>课均互动参与度</th><th>课均不活跃学生数</th><th>课均参与互动均衡度</th></tr></thead></table><div class='panel-body'><table class='table table-border table-striped'><thead><tr><th>姓名</th><th>年级</th><th>科目</th><th>课表课时数</th><th>如e课时数</th><th>如e课时数比例</th><th>课堂积分</th><th>课均积分</th></tr></thead><tbody>";
+		    	html = "<div class='panel-header'>班级学生互动表现统计表</div><div class='panel-body'><div class='chart-box' id='chart' style='width: 960px;height: 450px;margin-top: 34px;'></div><div class='tableData'><table class='table table-border table-striped'><thead><tr><th>班级</th><th>学生数</th><th>课表课时数</th><th>如e课时数</th><th>课均互动次数</th><th>课均互动参与度</th><th>课均不活跃学生数</th><th>课均参与互动均衡度</th></tr></thead><tbody>";
 		    	for(var i=0;i < dataArr.length;i++){
-//		    		html += "<tr><td>"+ dataArr[i].classname +"</td><td>"+ dataArr[i].studentnum +"</td><td>"+ dataArr[i].classNum +"</td><td>"+ dataArr[i].ruyinum +"</td><td>"+ dataArr[i].ave_interaction +"</td><td>"+ dataArr[i].ave_takePart +"</td><td>"+ dataArr[i].ave_noActive +"</td><td>"+ dataArr[i].ave_balance +"</td></tr>"
+		    		html += "<tr><td>"+ dataArr[i].classname +"</td><td>"+ dataArr[i].studentnum +"</td><td>"+ dataArr[i].classNum +"</td><td>"+ dataArr[i].ruyinum +"</td><td>"+ dataArr[i].ave_interaction +"</td><td>"+ dataArr[i].ave_takePart +"</td><td>"+ dataArr[i].ave_noActive +"</td><td>"+ dataArr[i].ave_balance +"</td></tr>"
+		    		nameArr.push(dataArr[i].classname);
+		    		takepartArr.push(dataArr[i].ave_takePart);
+		    		balanceArr.push(dataArr[i].ave_balance);
 		    	}
-//		    	html += "</tbody></table></div></div>";
-//		    	$('.countInfo').html(html);
-				indexChart5();
+		    	console.log(nameArr)
+		    	html += "</tbody></table></div></div>";
+		    	$('.countInfo').html(html);
+				indexChart5(nameArr,takepartArr,balanceArr);
 		    	layer.msg('数据请求成功');
 		    	console.log(out)
 		    });
 	   }else if(page == '5'){
 	   		$data.getReport6(dayfrom,dayto,days,schoolid,function(out){
 		    	var dataArr = out.data.dataList;
+		    	var nameArr = [];
+		    	var takepartArr = [];
+		    	var balanceArr = [];
 //		    	console.log(dataArr)
 				$(".panel-header").html("年级和科目学生互动表现统计表");
-//		    	html = "<div class='panel-header'>年级和科目学生互动表现统计表</div><table class='table table-border table-striped fixed-Rep'><thead><tr><th>年级</th><th>科目</th><th>课表课时数</th><th>如e课时数</th><th>课均互动次数</th><th>课均互动参与度</th><th>课均不活跃学生数</th><th>课均参与互动均衡度</th></tr></thead></table><div class='panel-body'><table class='table table-border table-striped'><thead><tr><th>姓名</th><th>年级</th><th>科目</th><th>课表课时数</th><th>如e课时数</th><th>如e课时数比例</th><th>课堂积分</th><th>课均积分</th></tr></thead><tbody>";
+		    	html = "<div class='panel-header'>年级和科目学生互动表现统计表</div><div class='panel-body'><div class='chart-box' id='chart' style='width: 960px;height: 450px;margin-top: 34px;'></div><div class='tableData'><table class='table table-border table-striped'><thead><tr><th>年级</th><th>科目</th><th>课表课时数</th><th>如e课时数</th><th>课均互动次数</th><th>课均互动参与度</th><th>课均不活跃学生数</th><th>课均参与互动均衡度</th></tr></thead><tbody>";
 		    	for(var i=0;i < dataArr.length;i++){
-//		    		html += "<tr><td>"+ dataArr[i].gradeName +"</td><td>"+ dataArr[i].coursename +"</td><td>"+ dataArr[i].classNum +"</td><td>"+ dataArr[i].ruyinum +"</td><td>"+ dataArr[i].ave_interaction +"</td><td>"+ dataArr[i].ave_takePart +"</td><td>"+ dataArr[i].ave_noActive +"</td><td>"+ dataArr[i].ave_balance +"</td></tr>"
+		    		html += "<tr><td>"+ dataArr[i].gradeName +"</td><td>"+ dataArr[i].coursename +"</td><td>"+ dataArr[i].classNum +"</td><td>"+ dataArr[i].ruyinum +"</td><td>"+ dataArr[i].ave_interaction +"</td><td>"+ dataArr[i].ave_takePart +"</td><td>"+ dataArr[i].ave_noActive +"</td><td>"+ dataArr[i].ave_balance +"</td></tr>"
+		    		nameArr.push(dataArr[i].gradeName+'\n'+dataArr[i].coursename);
+		    		takepartArr.push(dataArr[i].ave_takePart);
+		    		balanceArr.push(dataArr[i].ave_balance);
 		    	}
-//		    	html += "</tbody></table></div></div>";
-//		    	$('.countInfo').html(html);
-				indexChart6();
+		    	html += "</tbody></table></div></div>";
+		    	$('.countInfo').html(html);
+				indexChart6(nameArr,takepartArr,balanceArr);
 		    	layer.msg('数据请求成功');
 		    	console.log(out)
 		    });

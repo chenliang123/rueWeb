@@ -538,7 +538,6 @@
 						}else if(v == 9){         //手写板
 								$("#tablebox").show();
 					          	$('.tab-art .text-art').hide();
-//					          	'13737','1672'
 					          	lessonid = 13737;
 					          	classid=1672;
 					          	pathStr = "http://api.skyeducation.cn/EduApi/upload/2017/05/26//";
